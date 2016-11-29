@@ -46,6 +46,8 @@ void	client(char **av)
    * create socket
    */
   int sock = init_connection(av[1]);
+  if (sock == -1)
+    return;
   char buf[1024];
   while (1)
     {
